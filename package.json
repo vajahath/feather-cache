@@ -25,9 +25,12 @@
   "bugs": {
     "url": "https://github.com/vajahath/feather-cache/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "clone": "^2.1.2"
+  },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
+    "@types/clone": "^0.1.30",
     "@types/jest": "^23.3.1",
     "@types/yeoman-generator": "^2.0.3",
     "@types/yosay": "^0.0.29",
@@ -42,7 +45,7 @@
     "prettier": "^1.13.7",
     "run-sequence": "^2.2.1",
     "tslint": "^5.10.0",
-    "ts-node":"^7.0.1",
+    "ts-node": "^7.0.1",
     "typescript": "^3.0.0"
   }
 }
