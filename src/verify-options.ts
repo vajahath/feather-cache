@@ -3,9 +3,9 @@
  * Either getFn, setFn, delFn should be set or none should be set.
  */
 
-import { IStoreOptions } from './IStoreOptions.interface';
+import { IFeatherCacheDriver } from './feather-cache-driver.interface';
 
-export function verifyOptions(options: IStoreOptions) {
+export function verifyOptions(options: IFeatherCacheDriver) {
   // if no options set, looks good, return
   if (!options) {
     return true;

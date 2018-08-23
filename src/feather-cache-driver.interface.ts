@@ -1,4 +1,4 @@
-export interface IStoreOptions {
+export interface IFeatherCacheDriver {
   maxAgeInMs?: number;
   setFn?: (key: string, val: any) => Promise<void>;
   getFn?: (key: string) => Promise<any>;

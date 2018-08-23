@@ -1,5 +1,5 @@
 import { verifyOptions } from '../src/verify-options';
-import { IStoreOptions } from '../src/IStoreOptions.interface';
+import { IFeatherCacheDriver } from '../src/feather-cache-driver.interface';
 import { FeatherCache } from '../src';
 
 /**
@@ -102,7 +102,7 @@ describe('testing with objects (FETCH', () => {
  */
 describe('testing verify options fn', () => {
   test('when all are set, should return true', () => {
-    const opt: IStoreOptions = {
+    const opt: IFeatherCacheDriver = {
       setFn: async (k, v) => {
         return;
       },
@@ -118,7 +118,7 @@ describe('testing verify options fn', () => {
   });
 
   test('when one fn is missing, should throw err', () => {
-    const opt: IStoreOptions = {
+    const opt: IFeatherCacheDriver = {
       setFn: async (k, v) => {
         return;
       },
@@ -134,7 +134,7 @@ describe('testing verify options fn', () => {
   });
 
   test('when one another fn is missing, should throw err', () => {
-    const opt: IStoreOptions = {
+    const opt: IFeatherCacheDriver = {
       setFn: async (k, v) => {
         return;
       },

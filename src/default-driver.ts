@@ -1,6 +1,6 @@
-import { IStoreOptions } from './IStoreOptions.interface';
+import { IFeatherCacheDriver } from './feather-cache-driver.interface';
 
-export const defaultOptions: IStoreOptions = {
+export const defaultDriver: IFeatherCacheDriver = {
   maxAgeInMs: 60 * 5 * 1000,
   // tslint:disable-next-line:object-literal-shorthand
   setFn: async function(key: string, val: any) {

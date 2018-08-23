@@ -1,8 +1,13 @@
 import * as clone from 'clone';
 
-import { IStoreOptions } from './IStoreOptions.interface';
-import { defaultOptions } from './default-options';
+import { IFeatherCacheDriver } from './feather-cache-driver.interface';
+import { defaultDriver } from './default-driver';
 import { verifyOptions } from './verify-options';
+
+/**
+ * Interface for driver
+ */
+export { IFeatherCacheDriver };
 
 export class FeatherCache {
   /**
@@ -11,9 +16,9 @@ export class FeatherCache {
    */
   public store: any = null;
 
-  private options: IStoreOptions;
+  private options: IFeatherCacheDriver;
 
-  constructor(options?: IStoreOptions) {
+  constructor(options?: IFeatherCacheDriver) {
     // verify options
     verifyOptions(options);
 
@@ -26,7 +31,7 @@ export class FeatherCache {
     } else {
       this.store = {};
     }
-    this.options = Object.assign({}, defaultOptions, options);
+    this.options = Object.assign({}, defaultDriver, options);
   }
 
   /**
