@@ -1,4 +1,5 @@
 .roughs
+!dist/src/*.d.ts
 gulpfile.js
 .vscode/
 dist/tests
