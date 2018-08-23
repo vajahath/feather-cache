@@ -1,7 +1,8 @@
+import * as clone from 'clone';
+
 import { IStoreOptions } from './IStoreOptions.interface';
 import { defaultOptions } from './default-options';
 import { verifyOptions } from './verify-options';
-import * as clone from 'clone';
 
 export class FeatherCache {
   /**
