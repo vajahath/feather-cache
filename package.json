@@ -6,6 +6,14 @@
   "author": "Vajahath Ahmed <vajuoff.1@gmail.com> (https://twitter.com/vajahath7)",
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
+  "files": [
+    "dist/src/*",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "yarn.lock",
+    "package-lock.json"
+  ],
   "keywords": [],
   "scripts": {
     "build": "gulp build",
