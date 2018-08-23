@@ -5,8 +5,10 @@ A Simple Pluggable Key-Value Cache For Multiple Storage Options.
 [![npm](https://img.shields.io/npm/v/feather-cache.svg)](https://www.npmjs.com/package/feather-cache)
 [![Travis](https://img.shields.io/travis/vajahath/feather-cache.svg)](https://travis-ci.org/vajahath/feather-cache)
 [![styled with prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![npm](https://img.shields.io/npm/dt/feather-cache.svg)]()
-[![Built with generator-ts-np](https://img.shields.io/badge/scaffolding-ts_np-2699ad.svg)](https://github.com/vajahath/generator-ts-np)
+
+<!-- [![npm](https://img.shields.io/npm/dt/feather-cache.svg)]()
+[![Built with generator-ts-np](https://img.shields.io/badge/scaffolding-ts_np-2699ad.svg)](https://github.com/vajahath/generator-ts-np) -->
+
 [![](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
 ![](media/feather.png)
