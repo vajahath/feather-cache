@@ -60,7 +60,7 @@ export class FeatherCache {
    */
   public async fetch(
     key: string,
-  ): Promise<{ validTill: Date; key: string; val: any }> {
+  ): Promise<{ validTill: Date; key: string; val: any; __$EXPIRED?: boolean }> {
     const data = await this.options.getFn.call(this, key);
     if (!data) {
       return null;
