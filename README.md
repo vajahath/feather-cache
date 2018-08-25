@@ -24,7 +24,7 @@ You don't have to install type definitions for typescript. It's built in.
 
 This is a simple caching frame which can be used with available drivers or you can easily write one your own. If no drivers are provided (default) works like an in-memory cache. But that is not what this module intended for. The in-memory cache is provided for the sake of convenience. If that is what all you want, [lru-cache](https://www.npmjs.com/package/lru-cache) is recommended.
 
-Actual use case for this module is to use with a driver (mongodb-driver or indexed-db-driver etc.) which enables persistent caching.
+Actual use case for this module is to use with a driver (mongodb-driver or [indexed-db-driver](https://www.npmjs.com/package/feather-cache-indexeddb) etc.) which enables persistent caching.
 
 ### Example
 
@@ -93,6 +93,16 @@ const dbDriver = {
 const featherStore = new FeatherCache(dbDriver);
 // ...
 ```
+
+An example: [feather-cache-indexeddb](https://www.npmjs.com/package/feather-cache-indexeddb).
+
+Those who publish drivers advised to follow the naming convention:
+
+```txt
+feather-cache-<storage_option_name>
+```
+
+Also, attach the key word `feather-cache`.
 
 ---
 
