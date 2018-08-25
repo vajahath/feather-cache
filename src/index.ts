@@ -1,5 +1,3 @@
-import * as clone from 'clone';
-
 import { IFeatherCacheDriver } from './feather-cache-driver.interface';
 import { defaultDriver } from './default-driver';
 import { verifyOptions } from './verify-options';
@@ -52,7 +50,7 @@ export class FeatherCache {
       await this.options.delFn.call(this, key);
       return null;
     }
-    return clone(data.val);
+    return data.val;
   }
 
   /**
@@ -72,7 +70,7 @@ export class FeatherCache {
       await this.options.delFn.call(this, key);
       data.__$EXPIRED = true;
     }
-    return clone(data);
+    return data;
   }
 
   /**
@@ -81,9 +79,7 @@ export class FeatherCache {
    * @param val value
    * @param opt options
    */
-  public async set(key: string, value: any, opt: ISetOptions = {}) {
-    const val = clone(value);
-
+  public async set(key: string, val: any, opt: ISetOptions = {}) {
     const validTill = new Date(
       new Date().getTime() + (opt.maxAgeInMs || this.options.maxAgeInMs),
     );

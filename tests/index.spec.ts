@@ -77,7 +77,7 @@ describe('testing with objects (GET', () => {
   test('set -> get -> del -> get', async () => {
     const d = { a: 1 };
     await f.set('a', d);
-    expect(await f.get('a')).not.toBe(d);
+    expect(await f.get('a')).toBe(d);
     expect((await f.get('a')).a).toBe(1);
     await f.del('a');
   });
