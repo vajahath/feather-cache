@@ -84,7 +84,7 @@ export class FeatherCache {
       new Date().getTime() + (opt.maxAgeInMs || this.options.maxAgeInMs),
     );
 
-    const dataToStore = { validTill, key, val };
+    const dataToStore = { validTill, key, val, $__CREATED_AT: new Date() };
     await this.options.setFn.call(this, key, dataToStore);
   }
 
