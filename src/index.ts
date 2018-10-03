@@ -60,7 +60,13 @@ export class FeatherCache {
    */
   public async fetch(
     key: string,
-  ): Promise<{ validTill: Date; key: string; val: any; __$EXPIRED?: boolean }> {
+  ): Promise<{
+    validTill: Date;
+    key: string;
+    val: any;
+    __$EXPIRED?: boolean;
+    __$CREATED_AT: Date;
+  }> {
     const data = await this.options.getFn.call(this, key);
     if (!data) {
       return null;
@@ -84,7 +90,7 @@ export class FeatherCache {
       new Date().getTime() + (opt.maxAgeInMs || this.options.maxAgeInMs),
     );
 
-    const dataToStore = { validTill, key, val, $__CREATED_AT: new Date() };
+    const dataToStore = { validTill, key, val, __$CREATED_AT: new Date() };
     await this.options.setFn.call(this, key, dataToStore);
   }
 

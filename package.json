@@ -1,6 +1,6 @@
 {
   "name": "feather-cache",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A Simple Lightweight Pluggable Key-Value Cache For Multiple Storage Options.",
   "homepage": "https://github.com/vajahath/feather-cache#readme",
   "author": "Vajahath Ahmed <vajuoff.1@gmail.com> (https://twitter.com/vajahath7)",
