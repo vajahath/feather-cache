@@ -11,7 +11,7 @@ deploy:
   api_key:
     secure: ozo4ZRQ/ZLs6SJqFPeeb7knE0FKGFuJ7Ou1v4s4O8uoyp+ZV4T2YoxQLDrXQ+uuvQ+bPWM4KQvxPbixnSJAybg//CmymiHLL2zC0vBJI8tFh4jntKRnNsWwXRO5RhNxvEzA6v68PgnscZPNEckarCac4UStyYasd2S69sCgl2+zrd6d5jA660w1Z5lxYq3FtU/8nsfbjtkMVXOCKD1Y0XIgk0GGhTX3l/s/X1hSS2ia5fJjTLQkAhOvEY+vQrYqP+R+qDufiF1sXaDkxWOstEo2r/1d0tPIYYI2f8iVwkyAUlFMYdWdmoS4htHBWbKQNyCk5KL22NYw9fJXanZjscHu/MvJrSOip0c9+K5um8OiXcC+a+dCo2tT0hPgpoZ4tFfMdrMt7pOqqoQ6ihBpwiGuPVSBzW7AwFHEdhRkU7W0Cy8gFZBPeVhpBgS7taHpqvmx2aOvQm1Rx74/ECHcxvspmYgX+hV/BBwi6JNC6N7WviJxATJgSnNEi7So6G/oBO2BPm58OvVgoJfiydzd3jhgzgZAK1VfJr0KvZn1GJEisOA2EU2Pks9FVPpKnu4PY0+E5uvOM+Ywff0ZxTjXRyv0EWddYTEmo32gyZgHAugVuNVMTPhknVLTBp6hFXdtwHr1Lza6yA/oSZWoQwNwQTuwLnjZC5ueYlF9fWcas0ew=
   on:
-    node_js: lts/*
+    node_js: 8
     tags: true
     branch: master
 after_deploy: echo 'deploying to npm!'
