@@ -63,6 +63,16 @@ describe('testing FeatherCache main fetch', () => {
     const secFetch = await featherStore.fetch('99999');
     expect(secFetch).toBe(null);
   });
+
+  test('setFn --> fetch (hold delete) --> fetch --> fetch', async () => {
+    await featherStore.set('yyyy', 99999);
+    const firstFetch = await featherStore.fetch('yyyy', { delete: false });
+    expect(firstFetch.val).toBe(99999);
+    const secFetch = await featherStore.fetch('yyyy');
+    expect(secFetch.val).toBe(99999);
+    const thFetch = await featherStore.fetch('yyyy');
+    expect(thFetch).toBe(null);
+  });
 });
 
 /**

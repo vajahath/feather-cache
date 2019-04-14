@@ -60,6 +60,15 @@ export class FeatherCache {
    */
   public async fetch(
     key: string,
+    options: {
+      /**
+       * Deletes the record after expiry get.
+       * default is `true`.
+       * If you need to hold the delete, unset this option.
+       */
+
+      delete: boolean;
+    } = { delete: true },
   ): Promise<{
     validTill: Date;
     key: string;
@@ -73,7 +82,9 @@ export class FeatherCache {
     }
     if (data.validTill < new Date()) {
       // expired
-      await this.options.delFn.call(this, key);
+      if (options.delete) {
+        await this.options.delFn.call(this, key);
+      }
       data.__$EXPIRED = true;
     }
     return data;
